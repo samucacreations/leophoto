@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leo Photo</title>
+    <!--Link css-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!--Link para os efeitos do slide-->
+    <link rel="stylesheet"href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <!-- Link do css view imagem-->
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo-name">LEOSANDRO FOTOGRAFIA</a>
+    </header>
+    <!--Secção slide imagens-->
+    <section id="sliders">
+            <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="vetor/imagens/sliders/slide-1.jpg" alt="slide"></div>
+                <div class="swiper-slide"><img src="vetor/imagens/sliders/slide-2.jpg" alt="slide"></div>
+                <div class="swiper-slide"><img src="vetor/imagens/sliders/slide-3.jpg" alt="slide"></div>
+                <div class="swiper-slide"><img src="vetor/imagens/sliders/slide-4.jpg" alt="slide"></div>
+            </div>
+
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+        </div>
+        <h1 class="big-heading">LEOSANDRO FOTOGRAFIA</h1>
+    </section>
+    <div class="second-header">
+        <ul>
+            <li>
+                <a href="#discover">Portfólio</a>
+            </li>
+            <li>
+                <a href="bio/bio.html">Bio/Contato</a>
+            </li>
+        </ul>
+    </div>
+    <section id="discover">
+        <div class="albuns">
+            <div class="album-photo">
+                <a href="vetor/imagens/discover/discover-1.jpg" data-lightbox="models" data-title="Imagem 1">
+                    <img src="vetor/imagens/discover/discover-1.jpg" alt="discover-1">
+                </a>
+            </div>
+            <div class="album-photo">
+                <a href="vetor/imagens/discover/discover-2.jpg" data-lightbox="models" data-title="Imagem 2">
+                    <img src="vetor/imagens/discover/discover-2.jpg" alt="discover-2">
+                </a>
+            </div>
+            <div class="album-photo">
+                <a href="vetor/imagens/discover/discover.jpg" data-lightbox="models" data-title="Imagem 4">
+                    <img src="vetor/imagens/discover/discover.jpg" alt="discover">
+                </a>
+            </div>
+            <div class="album-photo">
+                <a href="vetor/imagens/discover/discover-7.jpg" data-lightbox="models" data-title="Imagem 7">
+                    <img src="vetor/imagens/discover/discover-7.jpg" alt="discover-7">
+                </a>
+            </div>
+            <div class="album-photo">
+                <a href="vetor/imagens/discover/discover-6.jpg" data-lightbox="models" data-title="Imagem 6">
+                    <img src="vetor/imagens/discover/discover-6.jpg" alt="discover-6">
+                </a>
+            </div>
+            <div class="album-photo">
+                <a href="vetor/imagens/discover/discover-5.jpg" data-lightbox="models" data-title="Imagem 5">
+                    <img src="vetor/imagens/discover/discover-5.jpg" alt="discover-5">
+                </a>
+            </div>
+            <div class="album-photo">
+                <a href="vetor/imagens/discover/discover-8.jpg" data-lightbox="models" data-title="Imagem 8">
+                    <img src="vetor/imagens/discover/discover-8.jpg" alt="discover-8">
+                </a>
+            </div>
+            <div class="album-photo">
+                <a href="vetor/imagens/discover/discover-9.jpg" data-lightbox="models" data-title="Imagem 9">
+                    <img src="vetor/imagens/discover/discover-9.jpg" alt="discover-9">
+                </a>
+            </div>
+            <div class="album-photo">
+                <a href="vetor/imagens/discover/discover-10.jpg" data-lightbox="models" data-title="Imagem 10">
+                    <img src="vetor/imagens/discover/discover-10.jpg" alt="discover-10">
+                </a>
+            </div>
+            <div class="album-photo">
+                <a href="vetor/imagens/discover/discover-11.jpg" data-lightbox="models" data-title="Imagem 11">
+                    <img src="vetor/imagens/discover/discover-11.jpg" alt="discover-11">
+                </a>
+            </div>
+            <div class="album-photo">
+                <a href="vetor/imagens/discover/discover-12.jpg" data-lightbox="models" data-title="Imagem 12">
+                    <img src="vetor/imagens/discover/discover-12.jpg" alt="discover-12">
+                </a>
+            </div>
+            <div class="album-photo">
+                <a href="vetor/imagens/discover/discover-13.jpg" data-lightbox="models" data-title="Imagem 13">
+                    <img src="vetor/imagens/discover/discover-13.jpg" alt="discover-13">
+                </a>
+            </div>
+        </div>
+        <div class="viewMore">
+            <lord-icon
+                src="https://cdn.lordicon.com/xhdhjyqy.json"
+                trigger="loop"
+                colors="primary:#121331"
+                style="width:30px;height:30px">
+            </lord-icon>
+        </div>
+    </section>
+    <footer>
+        <div class="rodape">
+            <span>© 2022 Leosandro Fotografia – All rights reserved.</span>
+            <a href="https://nicodesn.github.io/portfolio/" target="_blank">Powered By Nicode</a>
+        </div>
+    </footer>
+    <!--swiper slide-->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <!--animate icon-->
+    <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+    <!--script do jquey vie imagem-->
+    <script src="assets/js/lightbox-plus-jquery.js"></script>
+    <script>
+        var albumPhoto = document.querySelectorAll('.album-photo');
+        var btnVerMais = document.querySelector('lord-icon');
+        var currentimg = 3 
+        btnVerMais.addEventListener('click',
+        function(){
+            for(var i = currentimg;
+            i < currentimg+3; i++){
+                if(albumPhoto[i]){
+                    albumPhoto[i].style.display = 'block';
+                }
+            }
+            currentimg += 3;
+            if(currentimg>=albumPhoto.length){
+                event.target.style.display = 'none';
+            }
+        })
+        const swiper = new Swiper('.swiper', {
+            speed: 800,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+                dynamicBullets: true,
+            },
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+
+            navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+</body>
+</html>
