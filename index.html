@@ -11,15 +11,22 @@
     <link rel="stylesheet"href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <!-- Link do css view imagem-->
     <link rel="stylesheet" href="assets/css/lightbox.css">
+    <!--scroll animation-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <!--carregando a pagina-->
+    <div id="carregando"></div>
+    <header data-aos="fade-down">
         <a href="index.html" class="logo-name">LEOSANDRO FOTOGRAFIA</a>
+        <nav class="list-links">
+            <img src="vetor/icons/moon.png" alt="moon mode" id="dark-mode">
+        </nav>
     </header>
     <!--Secção slide imagens-->
     <section id="sliders">
             <!-- Slider main container -->
-        <div class="swiper">
+        <div class="swiper" data-aos="fade-up">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <!-- Slides -->
@@ -39,88 +46,83 @@
             <!-- If we need scrollbar -->
             <div class="swiper-scrollbar"></div>
         </div>
-        <h1 class="big-heading">LEOSANDRO FOTOGRAFIA</h1>
+        <h1 class="big-heading" data-aos="fade-up">LEOSANDRO FOTOGRAFIA</h1>
     </section>
     <div class="second-header">
         <ul>
-            <li>
+            <li data-aos="fade-right">
                 <a href="#discover">Portfólio</a>
             </li>
-            <li>
+            <li data-aos="fade-left">
                 <a href="bio/bio.html">Bio/Contato</a>
             </li>
         </ul>
     </div>
     <section id="discover">
         <div class="albuns">
-            <div class="album-photo">
+            <div class="album-photo" data-aos="fade-up-right">
                 <a href="vetor/imagens/discover/discover-1.jpg" data-lightbox="models" data-title="Imagem 1">
                     <img src="vetor/imagens/discover/discover-1.jpg" alt="discover-1">
                 </a>
             </div>
-            <div class="album-photo">
+            <div class="album-photo" data-aos="fade-up">
                 <a href="vetor/imagens/discover/discover-2.jpg" data-lightbox="models" data-title="Imagem 2">
                     <img src="vetor/imagens/discover/discover-2.jpg" alt="discover-2">
                 </a>
             </div>
-            <div class="album-photo">
+            <div class="album-photo" data-aos="fade-up-left">
                 <a href="vetor/imagens/discover/discover.jpg" data-lightbox="models" data-title="Imagem 4">
                     <img src="vetor/imagens/discover/discover.jpg" alt="discover">
                 </a>
             </div>
-            <div class="album-photo">
+            <div class="album-photo" data-aos="fade-up-right">
                 <a href="vetor/imagens/discover/discover-7.jpg" data-lightbox="models" data-title="Imagem 7">
                     <img src="vetor/imagens/discover/discover-7.jpg" alt="discover-7">
                 </a>
             </div>
-            <div class="album-photo">
+            <div class="album-photo" data-aos="fade-up">
                 <a href="vetor/imagens/discover/discover-6.jpg" data-lightbox="models" data-title="Imagem 6">
                     <img src="vetor/imagens/discover/discover-6.jpg" alt="discover-6">
                 </a>
             </div>
-            <div class="album-photo">
+            <div class="album-photo" data-aos="fade-up-left">
                 <a href="vetor/imagens/discover/discover-5.jpg" data-lightbox="models" data-title="Imagem 5">
                     <img src="vetor/imagens/discover/discover-5.jpg" alt="discover-5">
                 </a>
             </div>
-            <div class="album-photo">
+            <div class="album-photo" data-aos="fade-up-right">
                 <a href="vetor/imagens/discover/discover-8.jpg" data-lightbox="models" data-title="Imagem 8">
                     <img src="vetor/imagens/discover/discover-8.jpg" alt="discover-8">
                 </a>
             </div>
-            <div class="album-photo">
+            <div class="album-photo" data-aos="fade-up">
                 <a href="vetor/imagens/discover/discover-9.jpg" data-lightbox="models" data-title="Imagem 9">
                     <img src="vetor/imagens/discover/discover-9.jpg" alt="discover-9">
                 </a>
             </div>
-            <div class="album-photo">
+            <div class="album-photo" data-aos="fade-up-left">
                 <a href="vetor/imagens/discover/discover-10.jpg" data-lightbox="models" data-title="Imagem 10">
                     <img src="vetor/imagens/discover/discover-10.jpg" alt="discover-10">
                 </a>
             </div>
-            <div class="album-photo">
+            <div class="album-photo" data-aos="fade-up-right">
                 <a href="vetor/imagens/discover/discover-11.jpg" data-lightbox="models" data-title="Imagem 11">
                     <img src="vetor/imagens/discover/discover-11.jpg" alt="discover-11">
                 </a>
             </div>
-            <div class="album-photo">
+            <div class="album-photo" data-aos="fade-up">
                 <a href="vetor/imagens/discover/discover-12.jpg" data-lightbox="models" data-title="Imagem 12">
                     <img src="vetor/imagens/discover/discover-12.jpg" alt="discover-12">
                 </a>
             </div>
-            <div class="album-photo">
+            <div class="album-photo" data-aos="fade-up-left">
                 <a href="vetor/imagens/discover/discover-13.jpg" data-lightbox="models" data-title="Imagem 13">
                     <img src="vetor/imagens/discover/discover-13.jpg" alt="discover-13">
                 </a>
             </div>
         </div>
         <div class="viewMore">
-            <lord-icon
-                src="https://cdn.lordicon.com/xhdhjyqy.json"
-                trigger="loop"
-                colors="primary:#121331"
-                style="width:30px;height:30px">
-            </lord-icon>
+            <span>Ver Mais</span>
         </div>
     </section>
     <footer>
@@ -135,9 +137,13 @@
     <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
     <!--script do jquey vie imagem-->
     <script src="assets/js/lightbox-plus-jquery.js"></script>
+    <!--Scrip animate scroll-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        var darkMode = document.getElementById('dark-mode');
+        var loader = document.getElementById('carregando');
         var albumPhoto = document.querySelectorAll('.album-photo');
-        var btnVerMais = document.querySelector('lord-icon');
+        var btnVerMais = document.querySelector('.viewMore');
         var currentimg = 3 
         btnVerMais.addEventListener('click',
         function(){
@@ -169,6 +175,24 @@
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
             },
+        });
+
+        window.addEventListener('load', function(){
+            loader.style.display = "none";
+            document.body.style.overflow = "unset";
+        })
+        darkMode.onclick = function(){
+            document.body.classList.toggle("dark-mode");
+            if(document.body.classList.contains('dark-mode')){
+                darkMode.src = "vetor/icons/sun.png";
+            }else{
+                darkMode.src = "vetor/icons/moon.png"
+            }
+        }
+    </script>
+    <script>
+        AOS.init({
+            duration: 1000,
         });
     </script>
 </body>
