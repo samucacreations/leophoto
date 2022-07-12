@@ -2,6 +2,8 @@
 *{
     padding: 0;
     margin: 0;
+    text-decoration: none;
+    list-style: none;
     box-sizing: border-box;
 }
 html{
@@ -18,10 +20,6 @@ html{
     --bground-1: #000;
     --scrollcolor: #ebebeb;
 
-}
-a{
-    text-decoration: none;
-    list-style: none;
 }
 body{
     color: var(--textcolor);
@@ -61,10 +59,12 @@ body{
   }
 header{
     width: 100%;
+    height: 45px;
     padding: 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 1000;
 
 }
 header i{
@@ -85,6 +85,23 @@ header .list-links #dark-mode{
 }
 header .return{
     color: var(--textcolor);
+}
+/* menu mobile */
+.hamburger{
+    display: none;
+    margin-left: 0.5em;
+    line-height: 45px;
+    cursor: pointer;
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    border-radius: 0.5em;
+    background-color: var(--scrollcolor);
 }
 /* estilo slides*/
 #sliders{
@@ -123,7 +140,69 @@ header .return{
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 5em;
     padding: 15px 0;
+}
+.dropdown{
+    width: 200px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.select{
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    border-radius: 0.5em;
+    padding: 1em;
+    cursor: pointer;
+}
+.select-clicked{
+    border: 2px solid transparent;
+    box-shadow: 0 0 0.8em transparent;
+
+}
+.caret{
+    width: 0;
+    height: 0;
+    margin: 0 0.5em;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid var(--textcolor);
+    transition: 0.3s;
+}
+.caret-rotate{
+    transform: rotate(180deg);
+}
+.menu{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0.2em 0.5em;
+    background: var(--bground-1);
+    box-shadow: 0 0.5em 1em transparent;
+    border-radius: 0.5em;
+    position: absolute;
+    top: 3em;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    opacity: 0;
+    display: none;
+    transition: 0.2s;
+    z-index: 999;
+}
+.menu li{
+    padding: 0.7em 0.5em;
+    margin: 0.3em 0;
+    cursor: pointer;
+}
+.menu li:hover{
+    background: #61636860;   
+}
+.menu-open{
+    display: block;
+    opacity: 1;
 }
 .second-header ul{
     display: flex;
@@ -135,9 +214,6 @@ header .return{
 .second-header a{
     color: var(--textcolor);
     transition: 0.3s ease;
-}
-.second-header a:hover{
-    color: var(--hovercolor);
 }
 /* discover */
 
@@ -152,7 +228,7 @@ header .return{
     flex-direction: column;
 }
 .albuns{
-    width: 90%;
+    width: 100%;
     padding: 10px 0;
     display: flex;
     align-items: center;
@@ -163,12 +239,11 @@ header .return{
     margin: 10px;
     width: 300px;
     height: 300px;
-    display: none;
+    display: block;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-}
-.album-photo a{
+    overflow: hidden;
 }
 .album-photo a > span{
     margin: 10px 0 0 0;
@@ -176,27 +251,10 @@ header .return{
 .album-photo img{
     width: 100%;
     height: 100%;
-    border-radius: 5px;
     transition: all 0.3s ease;
 }
 .album-photo img:hover{
     transform: scale(1.1);
-}
-.album-photo:nth-child(-n+6){
-    display: block;
-}
-.viewMore{
-    text-align: center;
-    line-height: 30px;
-    width: 180px;
-    height: 30px;
-    border: 1px solid var(--hovercolor);
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.60s ease;
-}
-.viewMore:hover{
-    background-color: var(--hovercolor);
 }
 /* icon hover effect */
 
@@ -210,46 +268,37 @@ header .return{
     transition: 0.60s;
 }
 /* bio contato*/
-#bio, #contato{
-    width: 100%;
-    height: 100vh;
+#about, #contato{
     margin: 15px auto;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
-.container{
-    width: 90%;
-    height: 90%;
+#about .container{
+    max-width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 30px;
 }
-.content{
+#about .container .conteudo img{
+    border-radius: 50%;
+}
+#about .container .conteudo{
     width: 100%;
-    height: auto;
+    height: 400px;
+    padding: 0 20px;
     display: flex;
     align-items: center;
-    justify-content: center;
-}
-.content img{
-    width: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-}
-.content:not(:first-child){
-    height: 300px;
-    display: flex;
-    align-items: stretch;
     justify-content: center;
     flex-direction: column;
-    padding: 20px;
 }
-#contato .container{
-    height: 300px;
+#about .container .conteudo:not(:first-child){
+    padding: 30px;
+}
+#contato{
+    height: 400px;
 }
 .container .social-media{
     display: flex;
@@ -261,7 +310,7 @@ header .return{
     cursor: pointer;
 }
 .container ion-icon{
-    color: #000;
+    color: var(--textcolor);
     font-size: 30px;
 }
 #carregando{
@@ -272,6 +321,103 @@ header .return{
     background-size: 30%;
     overflow: hidden;
     z-index: 100;
+}
+/* orcamento */
+#orcamento,
+#contato{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#orcamento .container,
+#contato .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 2em;
+}
+#orcamento .content-orcamento{
+    text-transform: uppercase;
+    display: flex;
+}
+.content-orcamento a{
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+}
+#orcamento .pres{
+    width: 150px;
+    height: 150px;
+    margin: 2em 0.5em;
+    display: flex;
+    border-radius: 50%;
+    overflow: hidden;
+}
+#orcamento .pres li{
+    list-style: none;
+}
+#orcamento .pres li img{
+    border-radius: 50%;
+}
+#orcamento p{
+    margin: 4em 0;
+    text-align: center;
+    width: 60%;
+}
+.scrolltop{
+    outline: none;
+    border: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 10px;
+    bottom: 70px;
+    cursor: pointer;
+    background: none;
+    transition: all .4s ease;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+}
+.scrolltop.active{
+    opacity: 1;
+    visibility: visible;
+}
+.scrolltop i{
+    font-size: 25px;
+    color: var(--textcolor);
+}
+/* formulário envio orcamento */
+form div{
+    display: flex;
+    flex-direction: column;
+}
+form div > input,
+form select{
+    border: none;
+    border-radius: 0.3em;
+    height: 2.5em;
+    padding: 0 0.5em;
+    outline: none;
+}
+form label{
+    margin: 0.5em 0;
+}
+form button{
+    border: 1px solid var(--textcolor);
+    width: 12em;
+    height: 2.5em;
+    margin: 1.5em 0;
+}
+form button:hover{
+    background: var(--hovercolor);
+    transition: 0.60s;
 }
 footer{
     font-size: 14px;
@@ -294,6 +440,35 @@ footer .rodape{
     }
 }
 @media(max-width: 700px){
+    .hamburger{
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active  .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active  .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        background: var(--bground-1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 2.5em;
+        text-align: center;
+        transition: 0.3s;
+    }
+    .nav-menu.active{
+        left: 0;
+    }
     .big-heading{
         font-size: 16px;
         text-align: center;
@@ -310,31 +485,20 @@ footer .rodape{
        width: 90%;
        height: 500px;
     }
-    #bio{
-        padding: 50% 0;
-        height: 100%;
-        overflow: hidden;
+    #about .container .conteudo:not(:first-child){
+        padding: 15px 0;
     }
     #contato{
         height: auto;
-    }
-    #bio .content{
-        font-size: 15px;
     }
     .content img{
         width: 230px;
         height: 230px;
     }
-    #bio {
-        flex-direction: column;
-        height: 100vh;
-    }
     .container{
         flex-direction: column;
     }
-    #bio .big-heading{
-        margin-bottom: 15px;
-    }
+ 
     .social-media i{
         font-size: 20px;
         font-weight: 600;
@@ -342,6 +506,17 @@ footer .rodape{
     }
     #carregando{
         background-size: 10%;
+    }
+    #orcamento .content-orcamento{
+        text-transform: uppercase;
+        flex-direction: column;
+    }
+    #orcamento,
+    #contato{
+        height: auto;
+    }
+    #orcamento p{
+        width: 100%;
     }
     footer .rodape{
         text-align: center;

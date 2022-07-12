@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orçamentos</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!--scroll animation-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <header data-aos="fade-down">
+        <a href="../index.html" class="return"><i class="fa-solid fa-arrow-left"></i>Página Inícial</a>
+        <nav class="list-links">
+            <img src="../vetor/icons/moon.png" alt="moon mode" id="dark-mode">
+        </nav>
+    </header>
+    <section id="orcamento">
+        <div class="container">
+            <h1 class="big-heading">Faça o seu Orçamentos</h1>
+            <p>
+                Escolha abaixo a categória  de fotos que você gostaria e peça seu orçamento.
+                Trabalharei com carinho em uma proposta especial para você!
+            </p>
+            <div class="content-orcamento">
+                <a href="#categoria">
+                    <div class="pres">
+                        <img src="../vetor/imagens/orcamento/pub.jpg" alt="publicidade">
+                    </div>
+                    <h3>Publicidades</h3>
+                </a>
+                <a href="#categoria">
+                    <div class="pres">
+                        <img src="../vetor/imagens/orcamento/gestante.jpg" alt="gestante">
+                    </div>
+                    <h3>gestante</h3>
+                </a>
+                <a href="#categoria">
+                    <div class="pres">
+                        <img src="../vetor/imagens/orcamento/infatil.jpg" alt="infatil">
+                    </div>
+                    <h3>infatil</h3>
+                </a>
+                <a href="#categoria">
+                    <div class="pres">
+                        <img src="../vetor/imagens/orcamento/evento.jpg" alt="aniversário">
+                    </div>
+                    <h3>aniversário</h3>  
+                </a>
+                <a href="#categoria">
+                    <div class="pres">
+                        <img src="../vetor/imagens/orcamento/discover-4.jpg" alt="casamento">
+                    </div>
+                    <h3>casamento</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section id="contato">
+        <h1 class="big-heading">Orçamento</h1>
+        <div class="container">
+            <form action="orcamento" method="get">
+                <div>
+                    <label for="fname">Categoria</label>
+                    <select name="categoria" id="categoria">
+                        <option value="Selecionar">Escolha</option>
+                        <option value="casamento">Casamento</option>
+                        <option value="evento">Evento</option>
+                        <option value="gestante">gestante</option>
+                        <option value="infatil">infatil</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="lname">Seu nome</label>
+                    <input type="text" id="lname" name="name" required>
+                </div>
+                <div>
+                    <label for="lname">E-mail</label> 
+                    <input type="text" id="lname" name="email" required> 
+                </div>
+                <div>
+                    <label for="lname">Telefone</label>
+                    <input type="tel" id="lname" name="telefone" required> 
+                </div>
+                <div>
+                    <label for="lname">Data do Evento</label>
+                    <input type="date" id="lname" name="data" required> 
+                </div>
+                <div>
+                    <label for="lname">Local das Fotografia</label>
+                    <input type="text" id="lname" name="local" required> 
+                </div>
+                <div>
+                    <label for="lname">Me fale um pouco sobre você e como imagina suas fotos</label><br>
+                    <input type="text" id="lname" name="about">
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+    <!-- ion-icon-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- fontawesome-->
+    <script src="https://kit.fontawesome.com/90bb1626b3.js" crossorigin="anonymous"></script>
+    <!--Scrip animate scroll-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        var darkMode = document.getElementById('dark-mode');
+        var loader = document.getElementById('carregando');
+        var albumPhoto = document.querySelectorAll('.album-photo');
+        
+        window.addEventListener('load', function(){
+            loader.style.display = "none";
+            document.body.style.overflow = "unset";
+        })
+        darkMode.onclick = function(){
+            document.body.classList.toggle("dark-mode");
+            if(document.body.classList.contains('dark-mode')){
+                darkMode.src = "../vetor/icons/sun.png";
+            }else{
+                darkMode.src = "../vetor/icons/moon.png"
+            }
+        }
+    </script>
+    <script>
+        AOS.init({
+            duration: 1600,
+        });
+    </script>
+</body>
+</html>

@@ -19,8 +19,21 @@
     <div id="carregando"></div>
     <header data-aos="fade-down">
         <a href="index.html" class="logo-name">LEOSANDRO FOTOGRAFIA</a>
-        <nav class="list-links">
-            <img src="vetor/icons/moon.png" alt="moon mode" id="dark-mode">
+        <nav class="second-header">
+            <ul class="nav-menu">
+                <li data-aos="fade-right">
+                    <a href="#discover" class="nav-link">Portfólio</a>
+                </li>
+                <li data-aos="fade-left">
+                    <a href="bio/bio.html" class="nav-link">Bio/Contato</a>
+                </li>
+            </ul>
+            <div class="list-links"> <img src="vetor/icons/moon.png" alt="moon mode" id="dark-mode"></div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </nav>
     </header>
     <!--Secção slide imagens-->
@@ -49,18 +62,32 @@
         <h1 class="big-heading" data-aos="fade-up">LEOSANDRO FOTOGRAFIA</h1>
     </section>
     <div class="second-header">
+        <div class="dropdown" >
+            <div class="select">
+                <span class="selected">Diversos</span>
+                <div class="caret"></div>
+            </div>
+            <ul class="menu">
+                <li>
+                    <a href="#">Casamento</a>
+                </li>
+                <li>
+                    <a href="#">Ensaios</a>
+                </li>
+                <li class="active">
+                    <a href="#">Diversos</a>
+                </li>
+            </ul>
+        </div>
         <ul>
-            <li data-aos="fade-right">
-                <a href="#discover">Portfólio</a>
-            </li>
-            <li data-aos="fade-left">
-                <a href="bio/bio.html">Bio/Contato</a>
+            <li>
+                <a href="orcamento/orcamento.html">Orçamento</a>
             </li>
         </ul>
     </div>
     <section id="discover">
         <div class="albuns">
-            <div class="album-photo" data-aos="fade-up-right">
+            <div class="album-photo" data-aos="fade-up">
                 <a href="vetor/imagens/discover/discover-1.jpg" data-lightbox="models" data-title="Imagem 1">
                     <img src="vetor/imagens/discover/discover-1.jpg" alt="discover-1">
                 </a>
@@ -70,12 +97,12 @@
                     <img src="vetor/imagens/discover/discover-2.jpg" alt="discover-2">
                 </a>
             </div>
-            <div class="album-photo" data-aos="fade-up-left">
+            <div class="album-photo" data-aos="fade-up">
                 <a href="vetor/imagens/discover/discover.jpg" data-lightbox="models" data-title="Imagem 4">
                     <img src="vetor/imagens/discover/discover.jpg" alt="discover">
                 </a>
             </div>
-            <div class="album-photo" data-aos="fade-up-right">
+            <div class="album-photo" data-aos="fade-up">
                 <a href="vetor/imagens/discover/discover-7.jpg" data-lightbox="models" data-title="Imagem 7">
                     <img src="vetor/imagens/discover/discover-7.jpg" alt="discover-7">
                 </a>
@@ -85,12 +112,12 @@
                     <img src="vetor/imagens/discover/discover-6.jpg" alt="discover-6">
                 </a>
             </div>
-            <div class="album-photo" data-aos="fade-up-left">
+            <div class="album-photo" data-aos="fade-up">
                 <a href="vetor/imagens/discover/discover-5.jpg" data-lightbox="models" data-title="Imagem 5">
                     <img src="vetor/imagens/discover/discover-5.jpg" alt="discover-5">
                 </a>
             </div>
-            <div class="album-photo" data-aos="fade-up-right">
+            <div class="album-photo" data-aos="fade-up">
                 <a href="vetor/imagens/discover/discover-8.jpg" data-lightbox="models" data-title="Imagem 8">
                     <img src="vetor/imagens/discover/discover-8.jpg" alt="discover-8">
                 </a>
@@ -100,12 +127,12 @@
                     <img src="vetor/imagens/discover/discover-9.jpg" alt="discover-9">
                 </a>
             </div>
-            <div class="album-photo" data-aos="fade-up-left">
+            <div class="album-photo" data-aos="fade-up">
                 <a href="vetor/imagens/discover/discover-10.jpg" data-lightbox="models" data-title="Imagem 10">
                     <img src="vetor/imagens/discover/discover-10.jpg" alt="discover-10">
                 </a>
             </div>
-            <div class="album-photo" data-aos="fade-up-right">
+            <div class="album-photo" data-aos="fade-up">
                 <a href="vetor/imagens/discover/discover-11.jpg" data-lightbox="models" data-title="Imagem 11">
                     <img src="vetor/imagens/discover/discover-11.jpg" alt="discover-11">
                 </a>
@@ -115,16 +142,16 @@
                     <img src="vetor/imagens/discover/discover-12.jpg" alt="discover-12">
                 </a>
             </div>
-            <div class="album-photo" data-aos="fade-up-left">
+            <div class="album-photo" data-aos="fade-up">
                 <a href="vetor/imagens/discover/discover-13.jpg" data-lightbox="models" data-title="Imagem 13">
                     <img src="vetor/imagens/discover/discover-13.jpg" alt="discover-13">
                 </a>
             </div>
         </div>
-        <div class="viewMore">
-            <span>Ver Mais</span>
-        </div>
     </section>
+    <button class="scrolltop" onclick="backTop()">
+        <i class="fas fa-angle-up"></i>
+    </button>
     <footer>
         <div class="rodape">
             <span>© 2022 Leosandro Fotografia – All rights reserved.</span>
@@ -139,25 +166,16 @@
     <script src="assets/js/lightbox-plus-jquery.js"></script>
     <!--Scrip animate scroll-->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- fontawesome-->
+    <script src="https://kit.fontawesome.com/90bb1626b3.js" crossorigin="anonymous"></script>
+    <!-- ion-icon-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script>
         var darkMode = document.getElementById('dark-mode');
         var loader = document.getElementById('carregando');
         var albumPhoto = document.querySelectorAll('.album-photo');
-        var btnVerMais = document.querySelector('.viewMore');
-        var currentimg = 3 
-        btnVerMais.addEventListener('click',
-        function(){
-            for(var i = currentimg;
-            i < currentimg+3; i++){
-                if(albumPhoto[i]){
-                    albumPhoto[i].style.display = 'block';
-                }
-            }
-            currentimg += 3;
-            if(currentimg>=albumPhoto.length){
-                event.target.style.display = 'none';
-            }
-        })
+
         const swiper = new Swiper('.swiper', {
             speed: 800,
             autoplay: {
@@ -189,10 +207,61 @@
                 darkMode.src = "vetor/icons/moon.png"
             }
         }
+        const dropdowns = document.querySelectorAll('.dropdown');
+
+        dropdowns.forEach(dropdown => {
+            const select = dropdown.querySelector('.select');
+            const caret = dropdown.querySelector('.caret');
+            const menu = dropdown.querySelector('.menu');
+            const options = dropdown.querySelectorAll('.menu li');
+            const selected = dropdown.querySelector('.selected');
+
+            select.addEventListener('click', () =>{
+                select.classList.toggle('select-clicked');
+                caret.classList.toggle('caret-rotate');
+                menu.classList.toggle('menu-open');
+            });
+
+            options.forEach(option => {
+                option.addEventListener('click', () => {
+                    selected.innerText = option.innerText;
+                    select.classList.remove('select-clicked');
+                    caret.classList.remove('caret-rotate');
+                    menu.classList.remove('menu-open');
+                    options.forEach(option => {
+                        option.classList.remove('active');
+                    });
+                    option.classList.add('active');
+                });
+            });
+        });
+
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }))
+
+        window.addEventListener('scroll', function() {
+            let scroll = document.querySelector('.scrolltop');
+                scroll.classList.toggle('active', window.scrollY > 450);
+        })
+        function backTop(){
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            })
+        }
     </script>
     <script>
         AOS.init({
-            duration: 1000,
+            duration: 1600,
         });
     </script>
 </body>
