@@ -285,7 +285,7 @@ header .return{
     padding: 30px;
 }
 #about .container .conteudo img{
-    max-width: 300px;
+    max-width: auto;
     height: 300px;
     border-radius: 50%;
 }
@@ -416,10 +416,17 @@ form label{
     margin: 0.5em 0;
 }
 form button{
+    color: var(--textcolor);
+    text-align: center;
     border: 1px solid var(--textcolor);
     width: 12em;
     height: 2.5em;
+    line-height: 2.5em;
     margin: 1.5em 0;
+    text-decoration: none;
+}
+form button a{
+    color: var(--textcolor);
 }
 form button:hover{
     background: var(--hovercolor);
